@@ -1,0 +1,19 @@
+{
+    "logo": "Stadium Booking",
+    "menus": [
+      {
+        "title": "Stadium",
+        "items": ["View Stadiums", "Add New"]
+      },
+      {
+        "title": "Booking",
+        "items": ["Upcoming", "History"]
+      },
+      {
+        "title": "Profile",
+        "items": ["My Account", "Logout"]
+      }
+    ],
+    "authButton": "Sign In"
+  }
+  

@@ -1,0 +1,110 @@
+{
+    "matchDetails": {
+      "teams": "Newcastle United vs. Arsenal",
+      "date": "Sun Apr 27 at 16:30. Anfield, Liverpool, England, United Kingdom"
+    },
+    "stands": [
+        {
+          "id": "stand1",
+          "title": "Away Section",
+          "rating": "8.5",
+          "label": "Amazing Deal",
+          "ticketInfo": "1-3 Tickets",
+          "features": ["Electronic Tickets", "Seated Together"],
+          "price": "₹36,928",
+          "priceNote": "each"
+        },
+        {
+          "id": "stand2",
+          "title": "Main Stand",
+          "rating": "9.1",
+          "label": "Top Rated",
+          "ticketInfo": "2-4 Tickets",
+          "features": ["Instant Download", "VIP Access"],
+          "price": "₹48,000",
+          "priceNote": "each"
+        },
+        {
+            "id": "stand1",
+            "title": "Away Section",
+            "rating": "8.5",
+            "label": "Amazing Deal",
+            "ticketInfo": "1-3 Tickets",
+            "features": ["Electronic Tickets", "Seated Together"],
+            "price": "₹36,928",
+            "priceNote": "each"
+          },
+          {
+            "id": "stand2",
+            "title": "Main Stand",
+            "rating": "9.1",
+            "label": "Top Rated",
+            "ticketInfo": "2-4 Tickets",
+            "features": ["Instant Download", "VIP Access"],
+            "price": "₹48,000",
+            "priceNote": "each"
+          },
+          {
+            "id": "stand1",
+            "title": "Away Section",
+            "rating": "8.5",
+            "label": "Amazing Deal",
+            "ticketInfo": "1-3 Tickets",
+            "features": ["Electronic Tickets", "Seated Together"],
+            "price": "₹36,928",
+            "priceNote": "each"
+          },
+          {
+            "id": "stand2",
+            "title": "Main Stand",
+            "rating": "9.1",
+            "label": "Top Rated",
+            "ticketInfo": "2-4 Tickets",
+            "features": ["Instant Download", "VIP Access"],
+            "price": "₹48,000",
+            "priceNote": "each"
+          },
+          {
+            "id": "stand1",
+            "title": "Away Section",
+            "rating": "8.5",
+            "label": "Amazing Deal",
+            "ticketInfo": "1-3 Tickets",
+            "features": ["Electronic Tickets", "Seated Together"],
+            "price": "₹36,928",
+            "priceNote": "each"
+          },
+          {
+            "id": "stand2",
+            "title": "Main Stand",
+            "rating": "9.1",
+            "label": "Top Rated",
+            "ticketInfo": "2-4 Tickets",
+            "features": ["Instant Download", "VIP Access"],
+            "price": "₹48,000",
+            "priceNote": "each"
+          },
+          {
+            "id": "stand1",
+            "title": "Away Section",
+            "rating": "8.5",
+            "label": "Amazing Deal",
+            "ticketInfo": "1-3 Tickets",
+            "features": ["Electronic Tickets", "Seated Together"],
+            "price": "₹36,928",
+            "priceNote": "each"
+          },
+          {
+            "id": "stand2",
+            "title": "Main Stand",
+            "rating": "9.1",
+            "label": "Top Rated",
+            "ticketInfo": "2-4 Tickets",
+            "features": ["Instant Download", "VIP Access"],
+            "price": "₹48,000",
+            "priceNote": "each"
+          }
+      ]
+      
+  }
+  
