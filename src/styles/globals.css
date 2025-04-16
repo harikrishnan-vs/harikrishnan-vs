@@ -100,6 +100,9 @@ text:hover {
   @apply h-8 px-2 inline-flex items-center gap-1 text-[10px] font-normal bg-white border border-white rounded-full cursor-pointer shadow;
 }
 
+.filter-btn {
+  white-space: nowrap;
+}
 
 
 
@@ -110,9 +113,31 @@ text:hover {
 
 
 .filter-btn.active {
-  background-color: #E7F0FE;
-  color: #1967D2;
+  background-color: #efb3b3;
+  color: #b00506;
   font-weight: 600;
+}
+
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+#heart:hover{
+  fill: #b00506;
+}
+
+#ick{
+  fill: #b00506;
+}
+
+#tick{
+  fill: #0a0a0a;
 }
 
 

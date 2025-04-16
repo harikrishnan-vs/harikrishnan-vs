@@ -9,22 +9,25 @@ const Header = () => {
         <div className="flex items-center gap-12">
           {/* Logo */}
           <h1 className="text-xl font-bold text-blue-600">
-            <Link href="/">{headerData.logo}</Link>
+            <Link href="/">
+              <img src="/assets/img/logo.png" alt="Logo" className="w-[80px] h-auto max-md:w-[65px]" />
+            </Link>
+
           </h1>
 
           {/* Dropdown Menus */}
           <nav>
-            <ul className="flex gap-6">
+            <ul className="flex gap-6 max-md:hidden">
               {headerData.menus.map((menu, index) => (
                 <li key={index} className="relative group cursor-pointer">
-                  <span className="flex items-center gap-1 text-gray-700 hover:text-blue-600">
+                  <span className="flex items-center gap-1 text-gray-700 hover:text-[#b00506]">
                     {menu.title} <span><svg width="15" height="15" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="chevron-down" class="styles_DropDownIcon__2BEbl"><path fill="none" stroke="#000" stroke-width="1.03" d="M16 7l-6 6-6-6"></path></svg></span>
                   </span>
                   <ul className="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-md py-2 w-40 z-50">
                     {menu.items.map((item, i) => (
                       <li
                         key={i}
-                        className="px-4 py-2 hover:bg-blue-100 whitespace-nowrap"
+                        className="px-4 py-2 hover:text-[#b00506] whitespace-nowrap"
                       >
                         <Link href="#">{item}</Link>
                       </li>
@@ -38,7 +41,7 @@ const Header = () => {
 
         {/* Right: Sign In Button */}
         <div>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+          <button className="bg-[#b00506] text-white px-4 py-2 rounded hover:bg-red-700 transition cursor-pointer">
             {headerData.authButton}
           </button>
         </div>
