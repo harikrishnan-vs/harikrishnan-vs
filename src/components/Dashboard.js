@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Header from '@/components/Header';
-import data from '@/data/data.json'; // import your JSON
+import data from '@/data/data.json';
 
 export default function Dashboard() {
     const [svgContent, setSvgContent] = useState('');
@@ -10,19 +10,14 @@ export default function Dashboard() {
     const stands = data.stands;
 
     useEffect(() => {
-        // Check if window is available (client-side)
         if (typeof window !== 'undefined') {
-            // Set initial state
             setIsMobile(window.innerWidth < 768);
-            
-            // Add resize listener
             const handleResize = () => {
                 setIsMobile(window.innerWidth < 768);
             };
             
             window.addEventListener('resize', handleResize);
             
-            // Cleanup
             return () => {
                 window.removeEventListener('resize', handleResize);
             };
@@ -44,15 +39,12 @@ export default function Dashboard() {
       
         buttons.forEach(btn => {
           btn.addEventListener('click', () => {
-            // Remove "active" class from all buttons
             buttons.forEach(b => b.classList.remove('active'));
       
-            // Add "active" class to the clicked one
             btn.classList.add('active');
           });
         });
-      
-        // Cleanup on unmount
+
         return () => {
           buttons.forEach(btn => {
             btn.removeEventListener('click', () => {});
@@ -64,14 +56,11 @@ export default function Dashboard() {
         <div className="flex flex-col min-h-screen">
             <Header />
             
-            {/* Main content - Flex column on mobile, row on desktop */}
             <div className={`flex ${isMobile ? 'flex-col relative' : 'h-[calc(100vh-64px)] flex-row-reverse'}`}>
                 
-                {/* Right Panel (SVG Map) - First on mobile */}
                 <div className={`${isMobile ? 'w-full order-1 sticky top-0' : 'w-full'} bg-[#fcfcfc]`}>
                     <div className="filter-bar px-2 py-2">
                         <div className="relative h-12 flex p-2 gap-2 overflow-x-auto hide-scrollbar">
-                            {/* Filter buttons */}
                             <button className="filter-btn">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="14" height="14">
                                     <path fill-rule="evenodd"
@@ -87,16 +76,6 @@ export default function Dashboard() {
                                 </svg>
                             </button>
 
-                            {/* Tickets Dropdown */}
-                            {/* <select className="filter-select">
-                                <option>Any amount</option>
-                                {[...Array(20)].map((_, i) => (
-                                    <option key={i + 1} value={i + 1}>{i + 1}</option>
-                                ))}
-                            </select> */}
-
-                            {/* Filter Buttons */}
-                            {/* <button className="filter-btn">Seated Together</button> */}
                             <button className="filter-btn">₹36,928 - ₹1,062,295</button>
                             <button className="filter-btn">Ticket Types</button>
                             <button className="filter-btn">Best Seats</button>
@@ -114,9 +93,7 @@ export default function Dashboard() {
                     />
                 </div>
 
-                {/* Left Panel - Second on mobile */}
                 <div className={`${isMobile ? 'w-full order-2 overflow-auto' : 'w-full border-r border-r-gray-100 max-w-[550px]'} flex flex-col`}>
-                    {/* Match Details (fixed) */}
                     <div className="border-b border-b-gray-100 shrink-0 pt-4 px-6 pb-4">
                         <div className="h-5 flex justify-end gap-[1rem]">
                             <button type="button" tabIndex="0" aria-expanded="false" id="react-aria-«R5d8jmtrmqhnbH1»" className="p-0 flex items-center justify-center text-color-black bg-transparent cursor-pointer outline-none data-[pending=true]:opacity-50 data-[pending=true]:cursor-wait data-[disabled=true]:opacity-50 data-[disabled=true]:cursor-not-allowed size-5" data-rac="">
@@ -135,7 +112,6 @@ export default function Dashboard() {
                         <p>{matchDetails.time}</p>
                     </div>
 
-                    {/* Scrollable Stand List */}
                     <div className={` ${isMobile ? 'max-h-[60vh]' : 'flex-1 overflow-auto'}`}>
                         <div className="ListingGuarantee_container__J4rIl !border-0 flex items-center">
                             <svg width="40" height="40" viewBox="0 0 71 71" xmlns="http://www.w3.org/2000/svg" aria-label="seatpick guarantee">

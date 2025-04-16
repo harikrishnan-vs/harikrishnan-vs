@@ -1,24 +1,24 @@
 import { useState } from 'react'
 
 const StadiumPopup = ({ onConfirm }) => {
-  const [selected, setSelected] = useState(2) // Default to 2
+  const [selected, setSelected] = useState(2);
   const [dropdownValue, setDropdownValue] = useState(null)
 
-  // Handle button click
+  
   const handleSelect = (value) => {
     setSelected(value)
     if (value !== '5+') {
-      setDropdownValue(null) // Reset dropdown value if a button other than '5+' is selected
+      setDropdownValue(null);
     }
   }
 
-  // Handle "View Tickets" button click
+
   const handleConfirm = () => {
     const finalValue = selected === '5+' ? dropdownValue : selected
     if (finalValue) onConfirm(Number(finalValue))
   }
 
-  // Disable "View Tickets" button if no value is selected or dropdown value is missing
+
   const isDisabled = selected === null || (selected === '5+' && !dropdownValue)
 
   return (
@@ -30,7 +30,6 @@ const StadiumPopup = ({ onConfirm }) => {
         <div className="flex flex-wrap justify-center gap-2 mb-4">
           {['Any', 1, 2, 3, 4, '5+'].map((btn) => (
             <div key={btn}>
-              {/* If it's 5+ and user has clicked it, show the dropdown */}
               {btn === '5+' && selected === '5+' ? (
                 <select
                   className="px-4 py-2 border rounded text-sm"
@@ -71,4 +70,4 @@ const StadiumPopup = ({ onConfirm }) => {
   )
 }
 
-export default StadiumPopup
+export default StadiumPopup;

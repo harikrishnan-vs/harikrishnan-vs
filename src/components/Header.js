@@ -5,9 +5,7 @@ const Header = () => {
   return (
     <header className="bg-white border-b border-gray-200 px-6 py-4">
       <div className="max-w-full mx-auto flex justify-between items-center">
-        {/* Left: Logo + Menu */}
         <div className="flex items-center gap-12">
-          {/* Logo */}
           <h1 className="text-xl font-bold text-blue-600">
             <Link href="/">
               <img src="/assets/img/logo.png" alt="Logo" className="w-[80px] h-auto max-md:w-[65px]" />
@@ -15,7 +13,6 @@ const Header = () => {
 
           </h1>
 
-          {/* Dropdown Menus */}
           <nav>
             <ul className="flex gap-6 max-md:hidden">
               {headerData.menus.map((menu, index) => (
@@ -39,7 +36,6 @@ const Header = () => {
           </nav>
         </div>
 
-        {/* Right: Sign In Button */}
         <div>
           <button className="bg-[#b00506] text-white px-4 py-2 rounded hover:bg-red-700 transition cursor-pointer">
             {headerData.authButton}

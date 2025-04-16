@@ -31,21 +31,20 @@ path {
   transition: fill 0.2s ease-in-out;
 }
 
-/* Apply hover ONLY to rects NOT having st0, st1, st2 */
 g:hover > rect:not(.st0):not(.st1):not(.st2),
 rect:not(.st0):not(.st1):not(.st2):hover {
   fill: #d3d3d3 !important;
   cursor: pointer;
 }
 
-/* Apply hover ONLY to paths NOT having st1 or st2 */
+
 g:hover > path:not(.st1):not(.st2),
 path:not(.st1):not(.st2):hover {
   fill: #d3d3d3 !important;
   cursor: pointer;
 }
 
-/* Optional: Allow text to show pointer on hover */
+
 text:hover {
   cursor: pointer;
 }
@@ -95,7 +94,7 @@ text:hover {
   color: #868585;
 }
 
-/* Add this to your global CSS or use Tailwind classes directly */
+
 .filter-btn, .filter-select {
   @apply h-8 px-2 inline-flex items-center gap-1 text-[10px] font-normal bg-white border border-white rounded-full cursor-pointer shadow;
 }
